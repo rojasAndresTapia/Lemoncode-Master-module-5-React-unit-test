@@ -1,5 +1,5 @@
 import React from 'react';
-import { createEmptyLookup, Lookup } from 'common/models';
+import { createEmptyLookup, Lookup } from '../../models/lookup';
 
 export const useConfirmationDialog = () => {
   const [isOpen, setIsOpen] = React.useState(false);

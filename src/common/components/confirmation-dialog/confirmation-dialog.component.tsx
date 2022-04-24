@@ -5,20 +5,20 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 
-interface LabelProps {
-  closeButton: string;
-  acceptButton: string;
-}
-
 interface Props {
   isOpen: boolean;
-  onAccept: () => void;
-  onClose: () => void;
-  title: string | React.ReactNode;
-  labels: LabelProps;
+  onAccept?: () => void;
+  onClose?: () => void;
+  title?: string | React.ReactNode;
+  labels: {
+    closeButton?: string;
+    acceptButton?: string;
+  };
 }
 
-export const ConfirmationDialogComponent: React.FunctionComponent<Props> = props => {
+export const ConfirmationDialogComponent: React.FunctionComponent<Props> = (
+  props
+) => {
   const { isOpen, onAccept, onClose, title, labels, children } = props;
 
   const handleAccept = () => {
